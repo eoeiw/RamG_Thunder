@@ -2,10 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour // «√∑π¿ÃæÓ ¿Ãµø ∞¸∑√ ƒ⁄µÂ (π∫¡ˆ ¿Ã«ÿ ∏¯«ﬂ¿Ω §æ)
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] 
-    private float moveSpeed = 1f;
+    [SerializeField]
+    public float maxSpeed = 5f; // ÏµúÍ≥† ÏÜçÎèÑ
+    public float acceleration = 40f; // Í∞ÄÏÜçÎèÑ
+    public float deceleration = 40f; // Í∞êÏÜçÎèÑ
+    public float dashSpeed = 20f; // ÎåÄÏãú ÏÜçÎèÑ
+    public float dashDuration = 0.2f; // ÎåÄÏãú ÏßÄÏÜç ÏãúÍ∞Ñ
+    public float dashCooldown = 0.3f; // ÎåÄÏãú Ïø®ÌÉÄÏûÑ
+    private bool isDashing = false;
+    private bool canDash = true;
+    private float dashTime;
+    private float nextDashTime;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -25,11 +34,31 @@ public class PlayerController : MonoBehaviour // «√∑π¿ÃæÓ ¿Ãµø ∞¸∑√ ƒ⁄µÂ (π∫¡ˆ ¿
     private void Update()
     {
         PlayerInput();
+
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canDash && !isDashing)
+        {
+            Dash(movement);
+        }
+
+        if (isDashing && Time.time >= dashTime)
+        {
+            isDashing = false;
+            canDash = false;
+            nextDashTime = Time.time + dashCooldown;
+        }
+
+        if (!canDash && Time.time >= nextDashTime)
+        {
+            canDash = true;
+        }
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (!isDashing)
+        {
+            Move();
+        }
     }
 
     private void PlayerInput()
@@ -39,6 +68,28 @@ public class PlayerController : MonoBehaviour // «√∑π¿ÃæÓ ¿Ãµø ∞¸∑√ ƒ⁄µÂ (π∫¡ˆ ¿
 
     private void Move()
     {
-        rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
+        if (movement.x != 0 || movement.y != 0)
+        {
+            rb.AddForce(movement * acceleration);
+
+            // ÏµúÍ≥† ÏÜçÎèÑ Ï†úÌïú
+            if (rb.velocity.magnitude > maxSpeed)
+            {
+                rb.velocity = rb.velocity.normalized * maxSpeed;
+            }
+        }
+        else
+        {
+            // Í∞êÏÜç
+            rb.velocity = Vector2.MoveTowards(rb.velocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+        }
+    }
+
+    private void Dash(Vector2 direction)
+    {
+        isDashing = true;
+        dashTime = Time.time + dashDuration;
+        rb.velocity = direction.normalized * dashSpeed;
     }
 }
+
