@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private bool canDash = true;
     private float dashTime;
     private float nextDashTime;
+    [SerializeField]
+    private TrailRenderer myTrailRenderer;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             isDashing = false;
             canDash = false;
+            myTrailRenderer.emitting = false;
             nextDashTime = Time.time + dashCooldown;
         }
 
@@ -90,6 +93,7 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         dashTime = Time.time + dashDuration;
         rb.velocity = direction.normalized * dashSpeed;
+        myTrailRenderer.emitting = true;
     }
 }
 
