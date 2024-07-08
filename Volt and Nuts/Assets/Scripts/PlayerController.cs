@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float dashCooldown = 0.3f; // 대시 쿨타임
     private bool isDashing = false;
     private bool canDash = true;
+    private bool dashEnd = false;
     private float dashTime;
     private float nextDashTime;
     [SerializeField]
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         playerControls.Enable();
     }
 
+
     private void Update()
     {
         PlayerInput();
@@ -40,14 +42,6 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canDash && !isDashing)
         {
             Dash(movement);
-        }
-
-        if (isDashing && Time.time >= dashTime)
-        {
-            isDashing = false;
-            canDash = false;
-            myTrailRenderer.emitting = false;
-            nextDashTime = Time.time + dashCooldown;
         }
 
         if (!canDash && Time.time >= nextDashTime)
@@ -58,6 +52,21 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDashing && Time.time >= dashTime)
+        {
+            isDashing = false;
+            canDash = false;
+            myTrailRenderer.emitting = false;
+            dashEnd = true;
+            nextDashTime = Time.time + dashCooldown;
+        }
+
+        if (dashEnd)
+        {
+            rb.velocity *= 0.3f;
+            dashEnd = false;
+        }
+
         if (!isDashing)
         {
             Move();
