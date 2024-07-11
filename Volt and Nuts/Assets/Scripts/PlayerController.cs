@@ -1,32 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+public enum CharacterState
+{
+    Idle,
+    Moving,
+    Dashing,
+    Attacking
+}
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    public float maxSpeed = 5f; // 최고 속도
-    public float acceleration = 40f; // 가속도
-    public float deceleration = 40f; // 감속도
-    public float dashSpeed = 20f; // 대시 속도
-    public float dashDuration = 0.2f; // 대시 지속 시간
-    public float dashCooldown = 0.3f; // 대시 쿨타임
-    private bool isDashing = false;
-    private bool canDash = true;
-    private bool dashEnd = false;
-    private float dashTime;
-    private float nextDashTime;
-    [SerializeField]
-    private TrailRenderer myTrailRenderer;
-
-    private PlayerControls playerControls;
+    public float maxSpeed = 7f;
+    public float acceleration = 40f;
+    public float deceleration = 40f;
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 0.3f; // 대쉬 쿨타임
+    public float attackCooldown = 0.2f; // 공격 쿨타임
+    public float attackDuration = 0.05f;
+    public float attackSpeed = 50f;
     private Vector2 movement;
+    private Vector2 dashDirection;
+    private Vector2 mouseDirection;
+    private CharacterState currentState = CharacterState.Idle;
+    private PlayerControls playerControls;
     private Rigidbody2D rb;
+    private Camera mainCamera;
+    private float stateTimer;
+    private float dashCooldownTimer; // 대쉬 쿨타임 타이머
+    private float attackCooldownTimer; // 대쉬 쿨타임 타이머
 
     private void Awake()
     {
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
+        mainCamera = Camera.main;
     }
 
     private void OnEnable()
@@ -34,57 +41,79 @@ public class PlayerController : MonoBehaviour
         playerControls.Enable();
     }
 
-
-    private void Update()
+    private void OnDisable()
     {
-        PlayerInput();
+        playerControls.Disable();
+    }
 
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canDash && !isDashing)
-        {
-            Dash(movement);
-        }
+    void Update()
+    {
+        dashCooldownTimer -= Time.deltaTime; // 쿨타임 타이머 감소
+        attackCooldownTimer -= Time.deltaTime; // 쿨타임 타이머 감소
 
-        if (!canDash && Time.time >= nextDashTime)
+        mouseDirection = GetMouseDirection();
+
+        switch (currentState)
         {
-            canDash = true;
+            case CharacterState.Idle:
+                if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTimer <= 0) // 대쉬 키
+                {
+                    StartDash();
+                }
+                else if (Input.GetMouseButtonDown(0) && attackCooldownTimer <= 0) // 공격 키
+                {
+                    StartAttack();
+                }
+                break;
+
+            case CharacterState.Moving:
+                if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTimer <= 0)
+                {
+                    StartDash();
+                }
+                else if (Input.GetMouseButtonDown(0) && attackCooldownTimer <= 0)
+                {
+                    StartAttack();
+                }
+                break;
+
+            case CharacterState.Dashing:
+                stateTimer -= Time.deltaTime;
+                if (stateTimer <= 0)
+                {
+                    rb.velocity *= 0.2f;
+                    currentState = CharacterState.Idle;
+                }
+                break;
+
+            case CharacterState.Attacking:
+                stateTimer -= Time.deltaTime;
+                if (stateTimer <= 0)
+                {
+                    rb.velocity *= 0.1f;
+                    currentState = CharacterState.Idle;
+                }
+                break;
         }
     }
 
     private void FixedUpdate()
     {
-        if (isDashing && Time.time >= dashTime)
+        if (currentState == CharacterState.Idle || currentState == CharacterState.Moving)
         {
-            isDashing = false;
-            canDash = false;
-            myTrailRenderer.emitting = false;
-            dashEnd = true;
-            nextDashTime = Time.time + dashCooldown;
-        }
-
-        if (dashEnd)
-        {
-            rb.velocity *= 0.3f;
-            dashEnd = false;
-        }
-
-        if (!isDashing)
-        {
-            Move();
+            HandleMovement();
         }
     }
 
-    private void PlayerInput()
+    private void HandleMovement()
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
-    }
 
-    private void Move()
-    {
-        if (movement.x != 0 || movement.y != 0)
+        if (movement.sqrMagnitude > 0)
         {
-            rb.AddForce(movement * acceleration);
+            currentState = CharacterState.Moving;
+            rb.AddForce(movement.normalized * acceleration);
 
-            // 최고 속도 제한
             if (rb.velocity.magnitude > maxSpeed)
             {
                 rb.velocity = rb.velocity.normalized * maxSpeed;
@@ -92,17 +121,36 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // 감속
+            currentState = CharacterState.Idle;
             rb.velocity = Vector2.MoveTowards(rb.velocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
         }
     }
 
-    private void Dash(Vector2 direction)
+    private void StartDash()
     {
-        isDashing = true;
-        dashTime = Time.time + dashDuration;
-        rb.velocity = direction.normalized * dashSpeed;
-        myTrailRenderer.emitting = true;
+        currentState = CharacterState.Dashing;
+        stateTimer = dashDuration;
+        dashCooldownTimer = dashCooldown; // 대쉬 쿨타임 설정
+        dashDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0).normalized;
+        if (dashDirection == Vector2.zero)
+        {
+            dashDirection = Vector3.right;
+        }
+        rb.AddForce(dashDirection * dashSpeed, ForceMode2D.Impulse);
+    }
+
+    private void StartAttack()
+    {
+        currentState = CharacterState.Attacking;
+        stateTimer = attackDuration;
+        attackCooldownTimer = attackCooldown;
+        rb.AddForce(mouseDirection * attackSpeed, ForceMode2D.Impulse);
+    }
+
+    private Vector2 GetMouseDirection()
+    {
+        Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - rb.position).normalized;
+        return direction;
     }
 }
-

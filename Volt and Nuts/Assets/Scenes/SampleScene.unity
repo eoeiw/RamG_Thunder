@@ -700,16 +700,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 793130351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2cc991e72af5fb42af1ba00f81282d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 47ce5b1bd527a2d4a8d254873489a28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  acceleration: 30
-  deceleration: 30
-  dashSpeed: 20
+  acceleration: 10
+  deceleration: 40
+  dashSpeed: 10
   dashDuration: 0.2
-  dashCooldown: 0.3
-  myTrailRenderer: {fileID: 1250606400}
+  attackDuration: 0.5
 --- !u!1 &895155467
 GameObject:
   m_ObjectHideFlags: 3
