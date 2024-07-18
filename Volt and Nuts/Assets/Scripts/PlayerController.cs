@@ -121,11 +121,11 @@ public class PlayerController : MonoBehaviour
 
         if(mousePos.x < playerScreenPoint.x)
         {
-            mySpriteRender.flipX = true;
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
         }
         else
         {
-            mySpriteRender.flipX = false;
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);        
         }
     }
 }
