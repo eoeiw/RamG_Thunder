@@ -22,24 +22,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "NormalAttack",
-                    "type": "Button",
-                    "id": "7b1223da-35e6-4dbc-8bc2-3217b2fc61ab",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "HeavyAttack",
-                    "type": "Button",
-                    "id": "26153bb7-2d62-4617-998b-1170ffd1d0d9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -108,26 +90,32 @@
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "Combat",
+            "id": "a3d4d2b7-222e-4da6-a6d6-94e53cd0c52d",
+            "actions": [
+                {
+                    "name": "Punch",
+                    "type": "Button",
+                    "id": "b0140b71-b486-4238-8a14-99f2d820b52a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "d3db733f-10aa-47c3-b9ae-8b47b7330f9c",
+                    "id": "91b1b84d-90f4-4791-bd29-29dc2a2d9d72",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "NormalAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "02b9a150-b37c-4e40-817a-5a2fc0e8e8b3",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HeavyAttack",
+                    "action": "Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
