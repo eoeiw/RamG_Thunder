@@ -172,7 +172,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e5f472632d7580c429e9e64c0869a923, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -519,7 +519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8653719598885068355, guid: 90d178cf94bc0e14bbd76d34d94fc788, type: 3}
       propertyPath: m_Name
-      value: Bolt
+      value: Bolt_S
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 90d178cf94bc0e14bbd76d34d94fc788, type: 3}
       propertyPath: m_LocalPosition.x

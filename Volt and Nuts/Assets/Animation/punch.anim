@@ -74,7 +74,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -135,7 +135,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -196,7 +196,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -257,7 +257,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -318,7 +318,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -379,7 +379,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -431,7 +431,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_8
   m_PositionCurves:
   - curve:
       serializedVersion: 2
@@ -484,7 +484,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3
+    path: Bolt_S/bone_2/bone_3
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -518,7 +518,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4
+    path: Bolt_S/bone_2/bone_3/bone_4
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -579,7 +579,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -640,7 +640,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -674,7 +674,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -735,7 +735,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -796,7 +796,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -857,7 +857,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -869,7 +869,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4281141204
+      path: 1835167287
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -878,7 +878,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1631651328
+      path: 1142419797
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -887,7 +887,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3884238949
+      path: 2288876046
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -896,7 +896,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2404345644
+      path: 2853802105
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -905,7 +905,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 785042916
+      path: 1092845455
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -914,7 +914,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 275717789
+      path: 2971183
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -923,7 +923,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1631651328
+      path: 1142419797
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -932,7 +932,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3884238949
+      path: 2288876046
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -941,7 +941,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3345608469
+      path: 3609962407
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -950,7 +950,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2404345644
+      path: 2853802105
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -959,7 +959,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 785042916
+      path: 1092845455
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -968,7 +968,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 275717789
+      path: 2971183
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -977,7 +977,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1761599068
+      path: 4205885375
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -986,7 +986,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3597147833
+      path: 103881238
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -995,7 +995,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3345608469
+      path: 3609962407
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -1078,7 +1078,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3
+    path: Bolt_S/bone_2/bone_3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1135,7 +1135,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3
+    path: Bolt_S/bone_2/bone_3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1192,7 +1192,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3
+    path: Bolt_S/bone_2/bone_3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1231,7 +1231,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4
+    path: Bolt_S/bone_2/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1270,7 +1270,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4
+    path: Bolt_S/bone_2/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1309,7 +1309,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4
+    path: Bolt_S/bone_2/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1375,7 +1375,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1441,7 +1441,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1507,7 +1507,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1573,10 +1573,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -1639,10 +1639,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -1705,10 +1705,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -1771,7 +1771,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1837,7 +1837,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1903,7 +1903,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1969,10 +1969,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2035,10 +2035,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2101,10 +2101,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2140,7 +2140,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2179,7 +2179,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2218,7 +2218,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2284,10 +2284,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2350,10 +2350,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2416,10 +2416,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2482,7 +2482,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2548,7 +2548,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2614,7 +2614,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2680,10 +2680,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2746,10 +2746,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2812,10 +2812,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -2878,7 +2878,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2944,7 +2944,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3010,7 +3010,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3076,10 +3076,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3142,10 +3142,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3208,10 +3208,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3274,7 +3274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3340,7 +3340,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3406,7 +3406,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3472,10 +3472,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3538,10 +3538,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3604,10 +3604,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3661,10 +3661,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_8
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3718,10 +3718,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_8
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -3775,10 +3775,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_8
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   m_EulerEditorCurves:
   - serializedVersion: 2
     curve:
@@ -3788,7 +3788,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3800,7 +3800,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3812,7 +3812,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_8
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3824,7 +3824,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3836,7 +3836,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3848,7 +3848,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3860,7 +3860,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3872,7 +3872,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3884,7 +3884,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3896,7 +3896,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3908,7 +3908,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3920,7 +3920,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_17/bone_18/bone_19
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_17/bone_18
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3932,7 +3932,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3944,7 +3944,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3956,7 +3956,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3968,7 +3968,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3980,7 +3980,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -3992,7 +3992,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15/bone_16/bone_23
+    path: Bolt_S/bone_2/bone_3/bone_4/bone_15/bone_16
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4004,7 +4004,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_8
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4016,7 +4016,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_8
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4028,7 +4028,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bolt/bone_2/bone_3/bone_4/bone_15
+    path: Bolt_S/bone_2/bone_8
     classID: 4
     script: {fileID: 0}
     flags: 0
