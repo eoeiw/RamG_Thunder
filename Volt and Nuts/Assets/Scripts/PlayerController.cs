@@ -176,13 +176,13 @@ public class PlayerController : MonoBehaviour
         // 좌우 반전 적용을 위한 스케일 조정
         if (mousePos.x < playerScreenPoint.x)
         {
-            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f); // 다람쥐 전체 스케일 좌우반전
+            transform.localScale = new Vector3(-1f, 1f, 1f); // 다람쥐 전체 스케일 좌우반전
             bone3.localScale = new Vector3(1f, 1f, -1f); // 뼈 스케일 반전
             angle = angle + 40; // 값이 좀 달라서 미세조정 해야할 듯 함
         }
         else
         {
-            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // 다람쥐 기본 스케일
+            transform.localScale = new Vector3(1f, 1f, 1f); // 다람쥐 기본 스케일
             bone3.localScale = new Vector3(1f, 1f, 1f); // 뼈 기본 스케일
         }
 
