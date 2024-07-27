@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 8521104}
   - component: {fileID: 8521109}
   - component: {fileID: 8521106}
-  - component: {fileID: 8521105}
   - component: {fileID: 8521108}
+  - component: {fileID: 8521105}
   - component: {fileID: 8521107}
   - component: {fileID: 8521111}
   - component: {fileID: 8521112}
@@ -159,6 +159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1527791004}
   - {fileID: 1788134670}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -201,6 +202,7 @@ MonoBehaviour:
   dashSpeed: 40
   dashDuration: 0.2
   dashCooldown: 0.3
+  punchCollider: {fileID: 1527791004}
 --- !u!50 &8521107
 Rigidbody2D:
   serializedVersion: 4
@@ -240,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6e75761eb5b644aa647cac4823d411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punchCollider: {fileID: 1527791004}
 --- !u!212 &8521109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1347,6 +1350,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1527791003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527791004}
+  - component: {fileID: 1527791006}
+  - component: {fileID: 1527791005}
+  m_Layer: 0
+  m_Name: Punch Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1527791004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527791003}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7414533, w: 0.67100453}
+  m_LocalPosition: {x: 0.6083352, y: 2.0974324, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8521104}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527791005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527791003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf3983207b38db46bf8b665940233f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &1527791006
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527791003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.85622674, y: -3.4541621}
+      - {x: 0.95214313, y: -3.0508273}
+      - {x: 1.0690771, y: -2.0884063}
+      - {x: 0.94735634, y: -0.5984597}
+      - {x: 0.54662514, y: -0.40105715}
+      - {x: 0.15950105, y: -0.65330213}
+      - {x: 0.013474956, y: -1.9606485}
+      - {x: 0.12658456, y: -3.0295913}
+      - {x: 0.2465997, y: -3.5141897}
+      - {x: 0.39979744, y: -3.7104862}
+      - {x: 0.71047246, y: -3.7119253}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1760098911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -534130317801926578, guid: 3cbbebc9c42af614ba39186758bb93d7, type: 3}

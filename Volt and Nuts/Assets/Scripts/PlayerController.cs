@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRender;
     
     private Transform bone3; // 07.19 김영훈 : 자식 오브젝트 중 bone_3 찾기 위해 필요함
+    [SerializeField] private Transform punchCollider; // 07.26 김영훈 : 아마... Punch Collider 라는 오브젝트 찾기용 변수
 
     private void Awake()
     {
@@ -170,15 +171,17 @@ public class PlayerController : MonoBehaviour
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 direction = mousePos - playerScreenPoint;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 70; // 뼈 기준값이 10.344인가 그래서 임시방편으로 70 더했어요
+        Vector3 bone3ScreenPoint = Camera.main.WorldToScreenPoint(bone3.position); // bone3로 기준점 변경
+        Vector3 direction = mousePos - bone3ScreenPoint;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90; // 뼈 기준값이 10.344인가 그래서 임시방편으로 70 더했어요
 
         // 좌우 반전 적용을 위한 스케일 조정
         if (mousePos.x < playerScreenPoint.x)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f); // 다람쥐 전체 스케일 좌우반전
             bone3.localScale = new Vector3(1f, 1f, -1f); // 뼈 스케일 반전
-            angle = angle + 40; // 값이 좀 달라서 미세조정 해야할 듯 함
+            angle = angle + 10; // 값이 좀 달라서 미세조정 해야할 듯 함
+
         }
         else
         {
@@ -188,8 +191,7 @@ public class PlayerController : MonoBehaviour
 
         // 회전 적용
         bone3.rotation = Quaternion.Euler(0, 0, angle);
-
-        Debug.Log($"bone_3 World Rotation: {bone3.rotation.eulerAngles}"); //Console 값에 뼈 회전값 호출
+        punchCollider.rotation = Quaternion.Euler(0, 0, angle);
     }
 
 }
