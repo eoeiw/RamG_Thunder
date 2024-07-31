@@ -5,7 +5,7 @@ using UnityEngine;
 /// 다람쥐 행동 관련 스크립트
 /// </summary>
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     [SerializeField]
     public float maxSpeed = 5f; // 최고 속도
@@ -33,8 +33,10 @@ public class PlayerController : MonoBehaviour
     private Transform bone3; // 07.19 김영훈 : 자식 오브젝트 중 bone_3 찾기 위해 필요함
     [SerializeField] private Transform punchCollider; // 07.26 김영훈 : 아마... Punch Collider 라는 오브젝트 찾기용 변수
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>(); // 07.18 김영훈 : Animator 컴포넌트 호출
