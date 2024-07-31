@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DamageSource : MonoBehaviour
 {
-    /*private void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private int damageAmount = 1;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponet<EnemyAI>())
+        if (other.gameObject.GetComponent<EnemyHealth>())
         {
-            Debug.Log("AAAA");
+            EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(damageAmount);
         }
-    }*/
+    }
 
 
 }
