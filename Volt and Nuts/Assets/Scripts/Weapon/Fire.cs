@@ -30,14 +30,14 @@ public class Fire : MonoBehaviour, IWeapon
 
         // 발사 위치를 오프셋을 적용하여 계산
         Vector3 firePosition = fireSpawnPoint.position + fireOffset;
-
+        
         // 마우스 위치를 월드 좌표로 변환
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
-
+       
         // 발사 위치와 마우스 위치 간의 방향 계산
         Vector3 direction = (mouseWorldPosition - firePosition).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
+        
         // 투사체 생성 및 발사
         GameObject newFire = Instantiate(firePrefab, firePosition, Quaternion.Euler(0, 0, angle));
 

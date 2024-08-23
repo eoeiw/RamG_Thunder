@@ -48,6 +48,7 @@ MonoBehaviour:
   weaponInfo: {fileID: 0}
   plantPrefab: {fileID: 3662523353997547155, guid: 2c54a009c66429d46ad9838f0577b65d, type: 3}
   plantSpawnPoint: {fileID: 2365395871650523940}
+  plantOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &557341202185353154
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365395871650523940}
   m_Layer: 0
-  m_Name: Plant Spawn Point
+  m_Name: PlantSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -32,7 +32,7 @@ public class Plant : MonoBehaviour, IWeapon
 
         // 마우스 위치를 월드 좌표로 변환
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
-
+        
         // 발사 위치와 마우스 위치 간의 방향 계산
         Vector3 direction = (mouseWorldPosition - plantPosition).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
