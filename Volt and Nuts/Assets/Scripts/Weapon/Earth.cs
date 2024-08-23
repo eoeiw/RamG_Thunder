@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class Earth : MonoBehaviour, IWeapon
 {
@@ -36,19 +34,10 @@ public class Earth : MonoBehaviour, IWeapon
         // 기억된 위치에서 Earth 생성
         GameObject newEarth = Instantiate(earthPrefab, spawnPosition, Quaternion.identity);
 
+        // 충돌 처리를 위한 컴포넌트 추가
+        EarthCollision collisionHandler = newEarth.AddComponent<EarthCollision>();
+
         // Earth가 1초 후에 사라지도록 설정
         Destroy(newEarth, lifetime);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // 트리거 충돌 처리
-        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-
-        if (!other.isTrigger && enemyHealth)
-        {
-            enemyHealth?.TakeDamage(2); // 데미지값을 여기서 설정하거나, 개별 변수로 설정 가능
-            Destroy(gameObject);
-        }
     }
 }

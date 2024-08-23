@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4717321835707597993}
   - component: {fileID: 7760629990763706219}
   - component: {fileID: 1397091946333542320}
+  - component: {fileID: 9047052013284915063}
   m_Layer: 0
   m_Name: EarthMeteo_0
   m_TagString: Untagged
@@ -170,3 +171,15 @@ CapsuleCollider2D:
   m_Offset: {x: -0.000000030151547, y: -0.25292954}
   m_Size: {x: 1.8750002, y: 1.3691446}
   m_Direction: 1
+--- !u!114 &9047052013284915063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958832854833556710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed23b0838b9fc934e939dabc49320fc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6068593402725586044}
   - component: {fileID: 5131919369321330824}
   - component: {fileID: 2001925447452359847}
+  - component: {fileID: 2852900816073414624}
   m_Layer: 0
   m_Name: Wind_0
   m_TagString: Untagged
@@ -170,3 +171,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.04433394, y: -9.481078e-16}
   m_Size: {x: 1.268492, y: 1.9999999}
   m_Direction: 0
+--- !u!114 &2852900816073414624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4602646555589347956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711d6b2840393c54ba60d8a6ce0efb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

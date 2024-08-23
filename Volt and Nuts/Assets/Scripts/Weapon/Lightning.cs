@@ -31,16 +31,10 @@ public class Lightning : MonoBehaviour, IWeapon
         // 일정 시간 후에 번개 제거
         Destroy(newLightning, destroyAfterSeconds);
 
+        // 충돌 처리를 위한 컴포넌트 추가
+        LightningCollision collisionHandler = newLightning.AddComponent<LightningCollision>();
+
         ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // 적의 Health 스크립트를 찾고 데미지를 입힘
-        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        if (enemyHealth != null)
-        {
-            enemyHealth.TakeDamage(1); // 데미지 값을 적절히 설정
-        }
-    }
 }

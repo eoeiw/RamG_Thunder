@@ -49,6 +49,9 @@ public class Wind : MonoBehaviour, IWeapon
         // 바람 효과를 일정 시간 후에 삭제
         StartCoroutine(DestroyWindAfterDelay(newWind, lifetime));
 
+        // 충돌 처리를 위한 컴포넌트 추가
+        WindCollision collisionHandler = newWind.AddComponent<WindCollision>();
+
         ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
 

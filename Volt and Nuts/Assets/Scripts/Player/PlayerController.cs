@@ -33,6 +33,10 @@ public class PlayerController : Singleton<PlayerController>
     private Transform bone3; // 07.19 김영훈 : 자식 오브젝트 중 bone_3 찾기 위해 필요함
     [SerializeField] private Transform punchCollider; // 07.26 김영훈 : 아마... Punch Collider 라는 오브젝트 찾기용 변수
 
+
+    //private KnockBack knockBack;
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -44,6 +48,7 @@ public class PlayerController : Singleton<PlayerController>
 
         bone3 = transform.Find("Bolt_S/bone_2/bone_3"); // 07.19 김영훈 : 자식 오브젝트 중 bone_3 찾는 과정. 오브젝트 이름 바뀌면 수정해야함.
 
+        //knockBack = GetComponent<KnockBack>();
     }
 
     private void OnEnable()
@@ -136,6 +141,8 @@ public class PlayerController : Singleton<PlayerController>
 
     private void PlayerInput()
     {
+        // if (knockBack.GettingKnockBack) { return; }
+
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
 
         myAnimator.SetFloat("moveX", movement.x); // 07.18 김영훈
