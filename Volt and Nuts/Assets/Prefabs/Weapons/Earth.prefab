@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f443d167ebcd38f499668faa80a031cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  earthPrefab: {fileID: 2958832854833556710, guid: 827d38c31c755c2489e8c9ba5b71320a, type: 3}
+  delayBeforeDrop: 1
+  delayBeforeCollision: 0.5
