@@ -28,10 +28,10 @@ public class Bolt : MonoBehaviour
 
     void Start()
     {
-        playerControls.Combat.Punch.started += _ => Punch();
+        playerControls.Combat.Punch.started += _ => StartPunch();
     }
 
-    private void Punch()
+    private void StartPunch()
     {
         myAnimator.SetTrigger("Punch");
         punchCollider.gameObject.SetActive(true);
@@ -39,11 +39,9 @@ public class Bolt : MonoBehaviour
     }
 
 
-    public void DeactivatePunchCollider()
+    public void StopPunch()
     {
         punchCollider.gameObject.SetActive(false);
     }
 
 }
-
-
