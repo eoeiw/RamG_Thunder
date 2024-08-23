@@ -3,54 +3,63 @@ using UnityEngine;
 
 public class RandomMapGenerator : MonoBehaviour
 {
-    public int numberOfRooms = 10; // Total number of rooms to generate
-    public GameObject roomPrefab; // Prefab for visualizing rooms
-    public float roomSize = 1.0f; // Size of each room on the minimap
+    public int numberOfRooms = 10;
+    public GameObject roomPrefab;
+    public float roomSize = 1.0f;
 
-    private List<Room> rooms = new List<Room>();
+    public List<Room> rooms = new List<Room>();
+
+    public static RandomMapGenerator instance = null; 
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            if (instance != this)
+                Destroy(this.gameObject);
+        }
+    }
 
     void Start()
     {
         GenerateRooms();
-        VisualizeRooms();
+        PrintRooms();
+        MoveToScene1();
     }
 
     void GenerateRooms()
     {
-        // Start with the initial room as the start room
-        Room startRoom = new Room(Vector2Int.zero, 0); // Start room (type 0)
+        Room startRoom = new Room(Vector2Int.zero, 0);
         rooms.Add(startRoom);
 
-        // Generate remaining rooms
         for (int i = 1; i < numberOfRooms; i++)
         {
             Vector2Int newRoomPosition;
             do
             {
-                // Select a random existing room
                 Room existingRoom = rooms[Random.Range(0, rooms.Count)];
-
-                // Determine a random adjacent position
                 newRoomPosition = GetRandomAdjacentPosition(existingRoom.Position);
 
             } while (IsRoomPositionOccupied(newRoomPosition));
 
-            // Add regular rooms with random types
             Room newRoom = new Room(newRoomPosition, Random.Range(3, 9));
             rooms.Add(newRoom);
         }
 
-        // Assign special room types
         if (rooms.Count >= 3)
         {
-            rooms[rooms.Count - 2].Info = 1; // Treasure room (type 1)
-            rooms[rooms.Count - 1].Info = 2; // End room (type 2)
+            rooms[rooms.Count - 2].Info = 1; // Treasure room
+            rooms[rooms.Count - 1].Info = 2; // End room
         }
     }
 
     Vector2Int GetRandomAdjacentPosition(Vector2Int currentPosition)
     {
-        // Get a random direction: 0=right, 1=up, 2=left, 3=down
         int direction = Random.Range(0, 4);
         switch (direction)
         {
@@ -58,7 +67,7 @@ public class RandomMapGenerator : MonoBehaviour
             case 1: return currentPosition + Vector2Int.up;
             case 2: return currentPosition + Vector2Int.left;
             case 3: return currentPosition + Vector2Int.down;
-            default: return currentPosition; // This should never happen
+            default: return currentPosition;
         }
     }
 
@@ -73,6 +82,14 @@ public class RandomMapGenerator : MonoBehaviour
         }
         return false;
     }
+    
+    void PrintRooms()
+    {
+        foreach (Room room in rooms)
+        {
+            Debug.Log($"방 위치: {room.Position}, 방 타입: {room.Info}");
+        }
+    }
 
     void VisualizeRooms()
     {
@@ -81,7 +98,6 @@ public class RandomMapGenerator : MonoBehaviour
             Vector3 worldPosition = new Vector3(room.Position.x * roomSize, room.Position.y * roomSize, 0);
             GameObject roomObject = Instantiate(roomPrefab, worldPosition, Quaternion.identity);
 
-            // Change color based on room type
             Color roomColor = Color.white;
             switch (room.Info)
             {
@@ -94,16 +110,9 @@ public class RandomMapGenerator : MonoBehaviour
         }
     }
 
-    public class Room
+    void MoveToScene1()
     {
-        public Vector2Int Position { get; private set; }
-        public int Info { get; set; }
-
-        public Room(Vector2Int position, int info)
-        {
-            Position = position;
-            Info = info;
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scene1");
     }
 }
 
