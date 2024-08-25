@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // 씬 관리용 네임스페이스 추가
 
 public class RandomMapGenerator : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class RandomMapGenerator : MonoBehaviour
     public List<Room> rooms = new List<Room>();
 
     public static RandomMapGenerator instance = null; 
+    public int stageNumber = 0; // 스테이지 넘버 추가
 
     private void Awake()
     {
@@ -25,11 +27,86 @@ public class RandomMapGenerator : MonoBehaviour
         }
     }
 
-    void Start()
+
+    private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 각 씬이 로드될 때 새로운 스테이지를 생성
+        if (scene.name == "Map_Inventor")
+        {
+            GenerateNewStage(); // 새로운 맵 생성
+        }
+    }
+
+    public void CompleteStage()
+    {
+        stageNumber++;
+
+        if (stageNumber > 3)
+        {
+            // 스테이지 3을 클리어하면 엔딩 씬으로 이동
+            LoadEndingScene();
+        }
+        else
+        {
+            // 다음 스테이지에 따라 다른 씬을 로드
+            LoadNextScene();
+        }
+    }
+
+    void LoadNextScene()
+    {
+        switch (stageNumber)
+        {
+            case 2:
+                SceneManager.LoadScene("Scene2");
+                break;
+            case 3:
+                SceneManager.LoadScene("Scene3");
+                break;
+            default:
+                SceneManager.LoadScene("Scene1");
+                break;
+        }
+    }
+
+    void GenerateNewStage()
+    {
+        // 방 리스트 초기화 및 새 맵 생성
+        rooms.Clear();
         GenerateRooms();
-        PrintRooms();
-        MoveToScene1();
+        MoveToCurrentScene();
+    }
+
+    void MoveToCurrentScene()
+    {
+        // 현재 스테이지 넘버에 맞는 씬으로 이동
+        switch (stageNumber)
+        {
+            case 2:
+                SceneManager.LoadScene("Scene2");
+                break;
+            case 3:
+                SceneManager.LoadScene("Scene3");
+                break;
+            default:
+                SceneManager.LoadScene("Scene1");
+                break;
+        }
+    }
+
+    void LoadEndingScene()
+    {
+        SceneManager.LoadScene("EndingScene");
     }
 
     void GenerateRooms()
@@ -54,7 +131,7 @@ public class RandomMapGenerator : MonoBehaviour
         if (rooms.Count >= 3)
         {
             rooms[rooms.Count - 2].Info = 1; // Treasure room
-            rooms[rooms.Count - 1].Info = 2; // End room
+            rooms[rooms.Count - 1].Info = 2; // End room (출구)
         }
     }
 
@@ -82,7 +159,7 @@ public class RandomMapGenerator : MonoBehaviour
         }
         return false;
     }
-    
+
     void PrintRooms()
     {
         foreach (Room room in rooms)
@@ -90,31 +167,4 @@ public class RandomMapGenerator : MonoBehaviour
             Debug.Log($"방 위치: {room.Position}, 방 타입: {room.Info}");
         }
     }
-
-    void VisualizeRooms()
-    {
-        foreach (Room room in rooms)
-        {
-            Vector3 worldPosition = new Vector3(room.Position.x * roomSize, room.Position.y * roomSize, 0);
-            GameObject roomObject = Instantiate(roomPrefab, worldPosition, Quaternion.identity);
-
-            Color roomColor = Color.white;
-            switch (room.Info)
-            {
-                case 0: roomColor = Color.green; break; // Start room
-                case 1: roomColor = Color.yellow; break; // Treasure room
-                case 2: roomColor = Color.red; break; // End room
-            }
-
-            roomObject.GetComponent<Renderer>().material.color = roomColor;
-        }
-    }
-
-    void MoveToScene1()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scene1");
-    }
 }
-
-
-

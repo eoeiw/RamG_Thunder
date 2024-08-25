@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
-    public Sprite[] heartSprites;  // Unity Inspector¿¡¼­ µå·¡±× ¾Ø µå·ÓÀ¸·Î ¼³Á¤
+    public Sprite[] heartSprites;  // Unity Inspectorï¿½ï¿½ï¿½ï¿½ ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     public int CurrentHealth {  get; private set; }
 
@@ -77,13 +77,13 @@ public class PlayerHealth : Singleton<PlayerHealth>
         canTakeDamage = false;
         currentHealth -= damageAmount;
         CurrentHealth -= damageAmount;
-        StartCoroutine(DamageRecoveryRoutine()); // ´Ù½Ã µ¥¹ÌÁö ¹Þ±â±îÁöÀÇ ½Ã°£
+        StartCoroutine(DamageRecoveryRoutine()); // ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
 
         UpdateHeartImage();
         CheckIfPlayerDeath();
     }
 
-    private IEnumerator DamageRecoveryRoutine() // ´Ù½Ã µ¥¹ÌÁö ¹Þ±â±îÁö ÄÚ·çÆ¾
+    private IEnumerator DamageRecoveryRoutine() // ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ±ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½Æ¾
     {
         yield return new WaitForSeconds(damageRecoveryTime);
         canTakeDamage = true;

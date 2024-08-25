@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     private State state;
     private EnemyPathfinding enemyPathfinding;
+    private Transform playerTransform; // Reference to the player
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
+        // Assuming the player has a tag "Player"
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(RoamingRoutine());
     }
 
@@ -35,6 +38,14 @@ public class EnemyAI : MonoBehaviour
 
     private Vector2 GetRoamingPosition()
     {
-        return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        if (playerTransform == null)
+        {
+            // Fallback to random roaming if playerTransform is not set
+            return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        }
+
+        // Get direction towards the player
+        Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
+        return directionToPlayer;
     }
 }
