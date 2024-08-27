@@ -48,10 +48,10 @@ public class MapManager : MonoBehaviour
         {
             SpawnEnemies();
         }
-        else if (currentRoom.Info == 2)
+        else if (currentRoom.Info == 2 && IsRoomCleared(currentRoomPosition))
         {
-            // 출구 방이고 적을 모두 처치했으면 Scene2로 이동 (보스맵)
-            MoveToBossStage();
+            // 출구 방이고 적을 모두 처치했으면 다음 맵으로 이동 (Map_Inventor -> 새로운 맵 생성 후 Scene1로 복귀)
+            StartCoroutine(GoToNextStage());
         }
         else
         {
@@ -82,8 +82,8 @@ public class MapManager : MonoBehaviour
 
             if (currentRoom.Info == 2)
             {
-                // 출구 방에서 적을 모두 처치하면 보스 스테이지로 이동
-                MoveToBossStage();
+                // 출구 방에서 적을 모두 처치하면 다음 스테이지로 이동
+                StartCoroutine(GoToNextStage());
             }
             else
             {
@@ -94,10 +94,16 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    private void MoveToBossStage()
+    private IEnumerator GoToNextStage()
     {
-        // 보스 스테이지로 이동
-        SceneManager.LoadScene("Scene2");
+        // 1. 페이드 인 효과를 적용하여 스테이지 전환 효과를 줍니다.
+        yield return StartCoroutine(FadeIn());
+
+        // 2. Map_Inventor로 이동하여 새로운 맵을 생성합니다.
+        SceneManager.LoadScene("Map_Inventor");
+
+        // 3. 새 맵 생성 후 Scene1로 복귀합니다.
+        // 이 부분은 RandomMapGenerator에서 처리될 것입니다.
     }
 
     private void SpawnEnemies()
@@ -134,8 +140,8 @@ public class MapManager : MonoBehaviour
         // 방의 인접한 위치에 포탈 배치
         Vector2Int[] directions = { Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down };
         Vector3[] portalPositions = {
-            new Vector3(-35f, 1.2f, 0f),
-            new Vector3(38f, 1.2f, 0f),
+            new Vector3(-20f, 1.2f, 0f),
+            new Vector3(20f, 1.2f, 0f),
             new Vector3(0f, 16f, 0f),
             new Vector3(0f, -16f, 0f)
         };

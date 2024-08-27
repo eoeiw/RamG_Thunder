@@ -27,7 +27,6 @@ public class RandomMapGenerator : MonoBehaviour
         }
     }
 
-
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -49,34 +48,8 @@ public class RandomMapGenerator : MonoBehaviour
 
     public void CompleteStage()
     {
-        stageNumber++;
-
-        if (stageNumber > 3)
-        {
-            // 스테이지 3을 클리어하면 엔딩 씬으로 이동
-            LoadEndingScene();
-        }
-        else
-        {
-            // 다음 스테이지에 따라 다른 씬을 로드
-            LoadNextScene();
-        }
-    }
-
-    void LoadNextScene()
-    {
-        switch (stageNumber)
-        {
-            case 2:
-                SceneManager.LoadScene("Scene2");
-                break;
-            case 3:
-                SceneManager.LoadScene("Scene3");
-                break;
-            default:
-                SceneManager.LoadScene("Scene1");
-                break;
-        }
+        // 스테이지를 클리어하면 Map_Inventor로 돌아감
+        SceneManager.LoadScene("Map_Inventor");
     }
 
     void GenerateNewStage()
@@ -89,24 +62,8 @@ public class RandomMapGenerator : MonoBehaviour
 
     void MoveToCurrentScene()
     {
-        // 현재 스테이지 넘버에 맞는 씬으로 이동
-        switch (stageNumber)
-        {
-            case 2:
-                SceneManager.LoadScene("Scene2");
-                break;
-            case 3:
-                SceneManager.LoadScene("Scene3");
-                break;
-            default:
-                SceneManager.LoadScene("Scene1");
-                break;
-        }
-    }
-
-    void LoadEndingScene()
-    {
-        SceneManager.LoadScene("EndingScene");
+        // 무조건 Scene1로 이동
+        SceneManager.LoadScene("Scene1");
     }
 
     void GenerateRooms()

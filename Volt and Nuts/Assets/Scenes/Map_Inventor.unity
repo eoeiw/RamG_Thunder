@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3474c616a396c3149bb7eb7ed9bfce4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfRooms: 8
+  numberOfRooms: 3
   roomPrefab: {fileID: 8611502053694200342, guid: 60b21c74b4905074ab386af61174f320, type: 3}
   roomSize: 1
   stageNumber: 1

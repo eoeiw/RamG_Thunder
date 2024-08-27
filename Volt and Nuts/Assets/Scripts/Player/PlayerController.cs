@@ -56,6 +56,10 @@ public class PlayerController : Singleton<PlayerController>
         playerControls.Enable();
     }
 
+    private void OnDisable()
+    {
+        playerControls.Disable(); // 씬이 바뀔 때 InputSystem 비활성화
+    }
 
     private void Update()
     {

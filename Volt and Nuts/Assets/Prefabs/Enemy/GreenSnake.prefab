@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8298533178243012811}
   - component: {fileID: 5235003497843703149}
   m_Layer: 0
-  m_Name: Blue Slime
+  m_Name: GreenSnake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,12 +111,12 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3762838777879835126}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b66f4acd1e36ab94aab3a2f8428ed41e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 14b54b05f9f8cf346a13ecf7b9b787ed, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
